@@ -65,7 +65,7 @@ public class KruskalAlgorithm {
         }
         int[] rank = new int[n];
         int[] parent = new int[n];
-        for (int i=0; i<n; i++) parent[i] = i;
+        for (int i=0; i<n; i++) parent[i    ] = i;
         return kruskalMST(edges, n, parent, rank);
     }
     public static void main(String[] args) {
