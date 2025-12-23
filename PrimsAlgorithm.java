@@ -80,9 +80,5 @@ public class PrimsAlgorithm {
             gph[i] = temp;
         }
         System.out.println("Cost of the Minimum Spanning Tree (MST) = " + minimumCostSpanningTree(gph));
-
-        String x = "Helos";
-        ArrayList<Character> c = new ArrayList<>();
-        x = x.toLowerCase();
     }
 }
