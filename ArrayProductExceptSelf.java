@@ -19,4 +19,19 @@ public class ArrayProductExceptSelf {
             ans[i] = leftProd[i] * rightProd[i];
         return ans;
     }
+    public int[] productExceptSelfOptimal(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
+        int currleftProd = 1;
+        for (int i=0; i<n; i++) {
+            ans[i] = currleftProd;
+            currleftProd = currleftProd * nums[i];
+        }
+        int currrightProd = 1;
+        for (int i=n-2; i>=0; i--) {
+            currrightProd = currrightProd * nums[i+1];
+            ans[i] = ans[i] * currrightProd;
+        }
+        return ans;
+    }
 }
