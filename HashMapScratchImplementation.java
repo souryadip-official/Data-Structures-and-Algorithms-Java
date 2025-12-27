@@ -100,6 +100,22 @@ public class HashMapScratchImplementation {
             this.size--;
             return data;
         }
+
+        public ArrayList<T1> keySet() {
+            ArrayList<T1> keyset = new ArrayList<>();
+            for(int i=0; i<this.buckets.length; i++) {
+                LinkedList<Node> list = this.buckets[i];
+                for (int j=0; j<list.size(); j++) {
+                    keyset.add(list.get(j).key);
+                }
+            }
+            return keyset;
+        }
+
+        public boolean isEmpty() {
+            return this.size == 0;
+        }
+
         @Override
         public String toString() {
             StringBuilder str = new StringBuilder();
