@@ -65,6 +65,13 @@ public class DP01Knapsack {
                     dp[startItem][currCap] = dp[startItem + 1][currCap]; /* Current item cannot be included due to weight constraint, so exclusion is the only option */
             }
         }
+
+        for(int[] row : dp) {
+            for(int cell : row)
+                System.out.print(cell + " ");
+            System.out.println();
+        }
+        System.out.println();
         return dp[0][W]; /* dp[0][W] stores the maximum-profit achievable starting from the first item with full knapsack capacity */
     }
 
